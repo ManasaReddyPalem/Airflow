@@ -1,7 +1,7 @@
 from dag_orchestrate_1 import first_orchestrator_dag
 from dag_orchestrate_2 import second_orchestrator_dag
 from airflow.sdk import dag, task
-from airflow.operators.trigger_dagrun import TriggerDagRunOperator
+from airflow.operators.trigger_dagrun import TriggerDagRunOperator # pyright: ignore[reportMissingImports]
 
 '''Before triggering this parent DAG, ensure that both child DAGs
 are enabled in the Airflow UI. Otherwise, this parent DAG will trigger
